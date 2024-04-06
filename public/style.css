@@ -1,24 +1,279 @@
+/* Add @font-face rule to import Poppins font */
+@font-face {
+  font-family: 'Poppins';
+  src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+  /* Replace the URL with the correct path to the font file or use a CDN */
+}
+
 body {
-    font-family: Poppins, sans-serif;
-  }
+  font-family: 'Poppins', sans-serif; /* Use Poppins font for the entire body */
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px; /* Set maximum width to prevent content from stretching too much */
+  padding: 0 20px; /* Optional: Add padding to the container */
+}
+
+  /* Apply Poppins font to specific elements if needed */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font to headings */
+}
+
+p {
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font to paragraphs */
+}
+
+
   
-  form {
+form {
     margin-top: 20px;
-  }
+}
   
-  input[type="text"] {
+input[type="text"] {
     padding: 8px;
     border: 1px solid #ccc;
-  }
+}
   
-  button {
+button {
     padding: 8px 16px;
     background-color: #007bff;
     color: #fff;
     border: none;
     cursor: pointer;
+}
+  
+button:hover {
+    background-color: #0056b3;
+}
+
+/* CSS for footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* CSS for header */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* CSS for navigation */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  color:#fff;
+}
+
+nav ul li {
+  margin: 0 10px;
+ 
+}
+/* CSS for navigation links */
+nav ul li a {
+  color: #fff; /* Default color for links */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Apply different colors to individual links */
+nav ul li:nth-child(1) a {
+  color: #ff6347; /* Color for the first link (Home) */
+}
+
+nav ul li:nth-child(2) a {
+  color: #00ff7f; /* Color for the second link (Projects) */
+}
+
+nav ul li:nth-child(3) a {
+  color: #4169e1; /* Color for the third link (Contact) */
+}
+/* CSS for hamburger menu */
+.hamburger {
+  display: none; /* Hide by default on larger screens */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Show on smaller screens */
+  }
+
+  nav ul {
+    display: none; /* Hide navigation links on smaller screens */
+    flex-direction: column; /* Display links vertically */
+  }
+}
+
+/* CSS for about section */
+.about {
+  padding: 20px;
+}
+
+.about-content {
+  display: flex;
+  align-items: flex-start; /* Align items to the top of the flex container */
+}
+
+.about-image {
+  width: 200px; /* Adjust width of the image container */
+  height: 200px; /* Set height to match width for a perfect circle */
+  border-radius: 50%; /* Make the image container round */
+  overflow: hidden; /* Clip the image to fit within the rounded container */
+  margin-right: 20px; /* Margin between image and description */
+}
+
+.about-image img {
+  width: 100%; /* Ensure image fills its container */
+  height: 100%; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the entire image is visible within the container */
+}
+
+.about-description {
+  flex: 1; /* Expand to fill remaining space */
+}
+
+.about-description p {
+  margin-top: 0; /* Remove top margin for paragraphs */
+}
+
+.about-description ul {
+  padding-left: 20px; /* Indent list items */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* Display content in a single column on smaller screens */
   }
   
-  button:hover {
-    background-color: #0056b3;
+  .about-description,
+  .about-skills {
+    flex: 1 1 100%; /* Each div takes up 100% of the available space on smaller screens */
   }
+}
+
+/* CSS for projects section */
+.projects {
+  padding: 20px;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+  gap: 20px; /* Spacing between project items */
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  grid-template-columns: repeat(2, 1fr); /* Two columns for screens up to 768px */
+}
+
+@media (max-width: 480px) {
+  grid-template-columns: 1fr; /* Single column for screens up to 480px */
+}
+
+
+.project-item {
+  border-radius: 8px; /* Rounded corners for project item */
+  overflow: hidden; /* Clip content to fit within the rounded corners */
+  position: relative; /* Enable positioning for hover effect */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.project-item img {
+  width: 100%; /* Ensure image fills its container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Hover effect */
+.project-item:hover {
+  transform: translateY(-5px); /* Move the image up by 5px on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow effect on hover */
+}
+
+/* CSS for contact form section */
+.contact-form {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-form form {
+  display: grid;
+  gap: 20px;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Style the button on hover */
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+/* CSS for project list section */
+.project-list {
+  padding: 20px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+  gap: 20px; /* Spacing between project items */
+}
+
+.project-item {
+  border-radius: 8px; /* Rounded corners for project item */
+  overflow: hidden; /* Clip content to fit within rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect to project items */
+  padding: 10px;
+}
+
+.project-item img {
+  width: 100%; /* Ensure image fills its container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.project-details {
+  padding: 10px; /* Padding for project details */
+}
+
+.project-details h3 {
+  margin-top: 0; /* Remove top margin for project title */
+}

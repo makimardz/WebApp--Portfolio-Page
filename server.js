@@ -24,22 +24,35 @@ app.post('/contact', (req, res) => {
     return res.status(400).send('All fields are required');
   }
 
-  // Placeholder code for handling form submission (replace with actual logic)
-  // For example, you can send an email, store the message in a database, etc.
+  
   
   res.send('Message received! We will get back to you soon.');
 });
 
 // Add route for projects page
 app.get('/projects', (req, res) => {
-  // Sample projects data (replace with actual data)
   const projects = [
-    { title: 'Project 1', description: 'Description of Project 1', technologies: ['HTML', 'CSS', 'JavaScript'] },
-    { title: 'Project 2', description: 'Description of Project 2', technologies: ['Node.js', 'Express.js', 'EJS'] }
-    // Add more projects as needed
+    { 
+      title: 'Project 1', 
+      description: 'Description of Project 1', 
+      imageUrl: '/project1.jpg', // Correct path relative to the 'public' folder
+      technologies: ['HTML', 'CSS', 'JavaScript'] 
+    },
+    { 
+      title: 'Project 2', 
+      description: 'Description of Project 2', 
+      imageUrl: '/project2.jpg', // Correct path relative to the 'public' folder
+      technologies: ['Node.js', 'Express.js', 'EJS'] 
+    },
+    { 
+      title: 'Project 3', 
+      description: 'Description of Project 3', 
+      imageUrl: '/project3.jpg', // Correct path relative to the 'public' folder
+      technologies: ['Node.js', 'Express.js', 'EJS'] 
+    }
   ];
 
-  res.render('projects', { projects });
+  res.render('projects', { projects }); // Ensure 'projects' array is passed to the template
 });
 
 app.listen(port, () => {

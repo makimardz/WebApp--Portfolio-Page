@@ -3,42 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="/styles.css">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>My Portfolio</h1>
+<header>
+    <h1>Maki C. Aranas</h1>
     <nav>
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/projects">Projects</a></li>
         <li><a href="/contact">Contact</a></li>
     </ul>
+    <button class="hamburger">&#9776;</button> <!-- Hamburger button -->
     </nav>
-  </header>
+</header>
 
-  <section class="about">
+<section class="about">
     <h2>About Me</h2>
-    <p>Welcome to my portfolio! I am a web developer passionate about creating interactive and user-friendly web applications.</p>
-    <p>Here are some of my skills:</p>
-    <ul>
-      <li>HTML5</li>
-      <li>CSS3</li>
-      <li>JavaScript (including Node.js)</li>
-      <li>React.js</li>
-      <!-- Add more skills as needed -->
-    </ul>
-  </section>
+    <div class="about-content">
+        <div class="about-image">
+            <img src="/maki.jpg" alt="My Profile Picture">
+        </div>
+          <div class="about-description">
+            <p>Welcome to my portfolio! I am a web developer passionate about creating interactive and user-friendly web applications.</p>
+            <p>Here are some of my skills:</p>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript (including Node.js)</li>
+                <li>React.js</li>
+            </ul>
+      </div>
+    </div>
+</section>
 
-  <section class="projects">
-    <h2>Projects</h2>
-    <p>Here are some of my recent projects:</p>
-    <!-- Add project details here -->
-  </section>
+<section class="projects">
+  <h2>Projects</h2>
+  <p>Here are some of my recent projects:</p>
+  <div class="project-gallery">
+      <div class="project-item">
+          <img src="/project1.jpg" alt="Project 1">
+      </div>
+      <div class="project-item">
+          <img src="/project2.jpg" alt="Project 2">
+      </div>
+      <div class="project-item">
+          <img src="/project3.jpg" alt="Project 3">
+      </div>
+      <!-- Add more project items as needed -->
+  </div>
+</section>
 
   <footer>
-    <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    <p>&copy; Maki C Aranas 2024. All rights reserved.</p>
+    <script src="/script.js" defer></script>
   </footer>
 </body>
 </html>
