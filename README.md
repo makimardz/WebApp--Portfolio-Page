@@ -1,34 +1,40 @@
 # Overview
 
-{Important!  Do not say in this section that this is college assignment.  Talk about what you are trying to accomplish as a software engineer to further your learning.}
+This is a simple portfolio web application built using Node.js with Express framework. It allows users to explore information about the owner, view their skills, projects, and contact them using a contact form.
 
-{Provide a description the web app that you wrote. Describe how to start a test server on your computer and what website to open up to see the first page of the app.}
+# Features
+* Home Page: Displays information about the owner, including their skills and recent projects.
+* Contact Page: Features a contact form where users can submit inquiries or messages to the owner.
+* Dynamic Content: Utilizes EJS templating to dynamically populate content based on user input and server-side logic.
+* Local Server Deployment: Runs on a local server provided by Express framework.
 
-{Describe your purpose for writing this software.}
-
-{Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the software running (starting the server and navigating through the web pages) and a walkthrough of the code.}
 
 [Software Demo Video](https://youtu.be/OxtOXacxFj8)
 
-# Web Pages
-
-{Describe each of the web pages you created and how the web app transitions between each of them.  Also describe what is dynamically created on each page.}
+# Usage
+* Navigate to the home page to explore information about the owner and their projects.
+* Visit the contact page to submit inquiries or messages using the contact form.
+* Fill out the form with your name, email, and message, and click "Send Message" to submit.
 
 # Development Environment
+* Node.js
+* Express.js
+* EJS (Embedded JavaScript) Templating Engine
+* HTML5
+* CSS3
 
-{Describe the tools that you used to develop the software}
-
-{Describe the programming language that you used and any libraries.}
+# Dependencies
+* express
+* ejs
 
 # Useful Websites
-
-{Make a list of websites that you found helpful in this project}
-* [Web Site Name](http://url.link.goes.here)
-* [Web Site Name](http://url.link.goes.here)
+* [Node.js Documentation](https://nodejs.org/en/)
+* [Express Documentation](https://expressjs.com/)
+* [EJS Documentation](https://ejs.co/)
 
 # Future Work
-
-{Make a list of things that you need to fix, improve, and add in the future.}
-* Item 1
-* Item 2
-* Item 3
+* Nice design
+* Populated content
+* Animated graphics and content
+* Add more projects
+* Add more skills 
